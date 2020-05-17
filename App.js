@@ -5,10 +5,8 @@ import Loading from "./Loading";
 import * as Location from 'expo-location';
 import axios from 'axios';
 import Weather from './Weather';
-import {Ionicons} from "@expo/vector-icons"
 
 const API_KEY = "16e4dac032cb71175bccaeca3c5b9bbd";
-
 export default class extends React.Component {
   state = {
     isLoading: true
@@ -40,6 +38,7 @@ export default class extends React.Component {
     }
   };
   componentDidMount() {
+    console.log("mount")
     this.getLocation();
   }
   render() {
